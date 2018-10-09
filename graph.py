@@ -2,6 +2,9 @@ class Vertex:
     def __init__(self,key):
         self.ID = key
         self.connectedTo = {}
+        self.predecessor = None
+        self.color = 'white'
+        self.distance = 0
 
     def addNeighbor(self,nbr,weight=0):
         self.connectedTo[nbr] = weight
@@ -17,6 +20,24 @@ class Vertex:
 
     def getWeight(self,nbr):
         return self.connectedTo[nbr]
+
+    def getDistance(self):
+        return self.distance
+
+    def setDistance(self,d):
+        self.distance = d
+
+    def setPred(self,v):
+        self.predecessor = v
+
+    def getPred(self):
+        return self.predecessor
+
+    def getColor(self):
+        return self.color
+
+    def setColor(self,color):
+        self.color = color
 
 class Graph:
     def __init__(self):
@@ -50,4 +71,11 @@ class Graph:
 
     def __iter__(self):
         return iter(self.vertList.values())
+
+
+
+    def getConnections(self):
+        return self.vertList
+
+
 
