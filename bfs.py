@@ -34,9 +34,7 @@ def bfs(g,start,target=None):
     vertQueue.enqueue(start)
     while vertQueue.size() > 0:
         currentVert = vertQueue.dequeue()
-#         print('cv=',type(currennbr))
-#         print('cv = ',currennbr.getConnections())
-#         print(currennbr.getConnections())
+
         for nbr in currentVert.getConnections():
             # print('nbr=',nbr)
 #             nbr = nbr
