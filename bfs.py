@@ -63,7 +63,8 @@ def traverse(v) :
         # print(x.getID)
         x=x.getPred()
         print(x.ID)
-    # print(x.getID())
+
+
 
 
 
