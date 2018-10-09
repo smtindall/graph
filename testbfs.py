@@ -15,3 +15,4 @@ t=wg.getVertex('SAGE')
 bfs(wg,s,target=t)
 print('traverse********************************************')
 traverse(t)
+#test
